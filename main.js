@@ -14,7 +14,7 @@ function fetchAllPkmns(number) {
     }
 }
 
-fetchAllPkmns(5);
+fetchAllPkmns(20);
 
 function createPkmnCard(pokemon) {
     const card = document.createElement('div');
@@ -29,7 +29,7 @@ function createPkmnCard(pokemon) {
     imgContainer.appendChild(img);
 
     const number = document.createElement('p');
-    number.textContent = `${pokemon.id}`;
+    number.textContent = `#${pokemon.id}`;
 
     const name = document.createElement('p');
     name.classList.add('name');
