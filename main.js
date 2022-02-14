@@ -1,9 +1,15 @@
 let pokemonContainer = document.getElementById('pkmnContainer');
 
-function fetchPkmn() {
-    fetch("https://pokeapi.co/api/v2/pokemon/")
+function fetchPkmn(id) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => console.log(data));
 }
 
-fetchPkmn();
+function fetchAllPkmns(number) {
+    for (let  i = 1;  i <= number;  i++) {
+    fetchPkmn(i);     
+    }
+}
+
+fetchAllPkmns(2);
